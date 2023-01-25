@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.linhtetko.themovieapp.viewpods.ActorListViewPod xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:paddingBottom="@dimen/margin_medium_2"
+    android:paddingTop="@dimen/margin_large"
+    android:background="@color/colorPrimaryDark">
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/lbl_best_actors"
+        android:textAllCaps="true"
+        android:textStyle="bold"
+        android:layout_marginStart="@dimen/margin_medium_2"
+        android:textColor="@color/colorSecondaryText"
+        android:id="@+id/tvBestActors"/>
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tvMoreActors"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAllCaps="true"
+        android:layout_marginEnd="@dimen/margin_medium_2"
+        android:text="@string/lbl_more_actors"
+        android:textColor="@color/white"
+        android:layout_alignBaseline="@id/tvBestActors"
+        android:layout_alignParentEnd="true"/>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rvActorList"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingEnd="@dimen/margin_medium_2"
+        android:layout_marginTop="@dimen/margin_medium"
+        android:clipToPadding="false"
+        android:layout_below="@id/tvMoreActors"
+        tools:listitem="@layout/view_holder_actor"
+        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+        android:orientation="horizontal"/>
+</com.linhtetko.themovieapp.viewpods.ActorListViewPod>
